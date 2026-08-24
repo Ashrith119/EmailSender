@@ -24,6 +24,7 @@ public class UserController {
         userService.register(user);
         return ResponseEntity.ok("Registration successful.OTP sent to email");
     }
+
     @PostMapping("/verify-otp")
     public ResponseEntity<String> verifyOtp(
             @RequestBody OtpVerificationRequest request) {
